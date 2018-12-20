@@ -63,10 +63,10 @@
         <div class="messageBox" slot='msg-icon'>
           <Row>
             <Col :xs='{span:0}' :sm='{span:24}'>
-              <Select v-model="lang" size="small" @on-change="changeLang"
+              <!-- <Select v-model="lang" size="small" @on-change="changeLang"
                       style="width:80px;position:relative;margin-top: -8px">
                 <Option v-for="item in langList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-              </Select>
+              </Select> -->
             <div class="iconBox">
 
               <Badge count="3">
