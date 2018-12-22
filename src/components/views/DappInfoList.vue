@@ -146,10 +146,10 @@
             </Select>
           </Form-item>
           <Form-item label='标签*'>
-            <!-- <Checkbox-group v-model='currDate.tags' @on-change="checkboxChange">
+            <Checkbox-group v-model='currDate.tags' @on-change="checkboxChange">
               <Checkbox v-for="(item,index) in tags" :key="index" :label="item.name"></Checkbox>
-            </Checkbox-group> -->
-            <Checkbox v-for="(item,index) in tags" :key="index" :label="item.name">{{item.name}}</Checkbox>
+            </Checkbox-group>
+            <!-- <Checkbox v-for="(item,index) in tags" :key="index" :label="item.name">{{item.name}}</Checkbox> -->
           </Form-item>
           <Form-item label='描述*'>
             <Input
@@ -708,6 +708,7 @@ export default {
       // params.name = dappInfo.name
       // params = Object.assign({}, dappInfo)
       // this.transferParams(params) // For GET method
+      console.log('dddd:' + JSON.stringify(dappInfo))
       if (this.currIndex !== -1) { // 编辑模式
         params.id = dappInfo.id
         this.$api.updateDappInfo(dappInfo).then(res => {
