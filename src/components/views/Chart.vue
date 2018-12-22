@@ -16,7 +16,9 @@
   </div>
 </template>
 <script>
-  import IEcharts from 'vue-echarts-v3/src/full.js'
+  // https://github.com/xlsdg/vue-echarts-v3/issues/74
+  // import IEcharts from 'vue-echarts-v3/src/full.js'
+  import IEcharts from 'vue-echarts-v3/dist/vue-echarts.js'
   export default {
     name: 'list',
     components: {IEcharts},
