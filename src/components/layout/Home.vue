@@ -67,7 +67,7 @@
                       style="width:80px;position:relative;margin-top: -8px">
                 <Option v-for="item in langList" :value="item.value" :key="item.value">{{ item.label }}</Option>
               </Select> -->
-            <div class="iconBox">
+            <!-- <div class="iconBox">
 
               <Badge count="3">
                 <Tooltip placement="bottom" content="通知">
@@ -76,7 +76,7 @@
                 </Tooltip>
               </Badge>
 
-            </div>
+            </div> -->
             </Col>
           </Row>
         </div>
