@@ -535,13 +535,25 @@ export default {
           this.listData[index].status
         }<br>Slogan标语：${
           this.listData[index].teaser
-        }<br>Logo：<image src='${
+        }<br>Logo：<image style="max-height: 160px;" src='${
           this.listData[index].logoUrl
-        }'/><br>Icon：<image src='${
+        }'/><br>Icon：<image style="max-height: 160px;" src='${
           this.listData[index].iconUrl
-        }'/><br>ProductImage：<image src='${
+        }'/><br>ProductImage：<image style="max-height: 160px;" src='${
           this.listData[index].productImage
-        }'/><br>Blog：${
+        }'/><br>Mainnet(CMT)：<div style="width: 100%;
+          height: auto;
+          word-wrap:break-word;
+          word-break:break-all;
+          overflow: hidden;"> ${
+          this.listData[index].contractsCmtMainnet
+        }</div><br>Testnet(CMT)：<div style="width: 100%;
+          height: auto;
+          word-wrap:break-word;
+          word-break:break-all;
+          overflow: hidden;"> ${
+          this.listData[index].contractsCmtTestnet
+        }</div><br>Blog：${
           this.listData[index].socials.blog.path
         }<br>Chat：${
           this.listData[index].socials.chat.path
