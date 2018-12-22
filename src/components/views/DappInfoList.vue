@@ -166,7 +166,7 @@
               message="<span class=dropzone-plus><img width=150 src=/static/img/upload-logo.png></span><br>Drop your icon here, or click to select"
               @uploadSuccess="setLogo"
               @removeFile="removeLogo"/>
-            <img v-bind:src='currDate.logoUrl' v-if="currIndex!=-1"/>
+            <img style="max-height: 160px;" v-bind:src='currDate.logoUrl' v-if="currIndex!=-1"/>
           </Form-item>
           <Form-item label='Icon*'>
             <!-- <Input v-model='currDate.iconUrl' placeholder='请输入'/> -->
@@ -175,7 +175,7 @@
               message="<span class=dropzone-plus><img width=150 src=/static/img/upload-icon.png></span><br>Drop your icon here, or click to select"
               @uploadSuccess="setIcon"
               @removeFile="removeIcon"/>
-            <img v-bind:src='currDate.iconUrl' v-if="currIndex!=-1"/>
+            <img style="max-height: 160px;" v-bind:src='currDate.iconUrl' v-if="currIndex!=-1"/>
           </Form-item>
           <Form-item label='Product image'>
             <!-- <Input v-model='currDate.productImage' placeholder='请输入'/> -->
@@ -184,7 +184,7 @@
               message="<span class=dropzone-plus><img width=150 src=/static/img/upload-product-image.png></span><br>Drop your icon here, or click to select"
               @uploadSuccess="setProductImage"
               @removeFile="removeProductImage"/>
-            <img v-bind:src='currDate.productImage' v-if="currIndex!=-1"/>
+            <img style="max-height: 160px;" v-bind:src='currDate.productImage' v-if="currIndex!=-1"/>
           </Form-item>
           <Form-item label='Blog' v-if="currDate.socials">
             <Input v-model='currDate.socials.blog.path' placeholder='请输入'/>
