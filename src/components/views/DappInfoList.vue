@@ -124,7 +124,7 @@
             <Input v-model='currDate.email' placeholder='请输入'/>
           </Form-item>
           <Form-item label='作者*'>
-            <Input v-model='currDate.authors' placeholder='请输入'/>
+            <Input v-model='theAuthors' placeholder='请输入'/>
           </Form-item>
           <Form-item label='Slogan标语*'>
             <Input v-model='currDate.teaser' placeholder='请输入'/>
@@ -440,6 +440,19 @@ export default {
   computed: {
     state () {
       return this.$store.state.app
+    },
+    theAuthors: {
+      get () {
+        if (this.currDate && this.currDate.authors) {
+          const values = this.currDate.authors.slice()
+          return values.join(', ')
+        }
+        return ''
+      },
+      set (value) {
+        const values = value.split(', ')
+        this.currDate.authors = values
+      }
     }
   },
   methods: {
