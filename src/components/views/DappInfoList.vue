@@ -129,11 +129,11 @@
           <Form-item label='Slogan标语*'>
             <Input v-model='currDate.teaser' placeholder='请输入'/>
           </Form-item>
-          <Form-item label='网站地址*'>
-            <Input v-model='currDate.website' placeholder='请输入'/>
+          <Form-item label='网站地址*' v-if="currDate.siteUrls">
+            <Input v-model='currDate.siteUrls.website' placeholder='请输入'/>
           </Form-item>
-          <Form-item label='DAPP地址'>
-            <Input v-model='currDate.dapp' placeholder='请输入'/>
+          <Form-item label='DAPP地址' v-if="currDate.siteUrls">
+            <Input v-model='currDate.siteUrls.dapp' placeholder='请输入'/>
           </Form-item>
           <Form-item label='选择分类*'>
             <Select v-model='currDate.category' placeholder='请选择'>
@@ -617,8 +617,10 @@ export default {
           teaser: '',
           email: '',
           category: '',
-          dapp: '',
-          website: '',
+          siteUrls: {
+            dapp: '',
+            website: ''
+          },
           authors: '',
           tags: '',
           badges: '',
