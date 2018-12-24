@@ -8,8 +8,8 @@
             <Form-item label='输入框'>
               <Input v-model='formItem.searchText' placeholder='请输入' style='width:187px'/>
             </Form-item>
-            <Form-item label='选择平台' style='max-height: 50px'>
-              <Select v-model='currDate.category' placeholder='请选择' style='width:187px'>
+            <Form-item label='选择分类' style='max-height: 50px'>
+              <Select v-model='params.category' placeholder='请选择' style='width:187px'>
                 <Option v-for="(item,index) in categories" :key="index" :value="item.slug">{{ item.name }}</Option>
               </Select>
             </Form-item>

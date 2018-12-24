@@ -20,9 +20,9 @@
               <Checkbox label="记住我"></Checkbox>
             </Checkbox-group>
             </Col>
-            <Col span="12">
+            <!-- <Col span="12">
             <a style="float:right" @click="toRegister">新用户注册</a>
-            </Col>
+            </Col> -->
           </Row>
 
         </Form>

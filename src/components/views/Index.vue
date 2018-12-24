@@ -1,6 +1,7 @@
 <template>
   <div class="index">
-    <Row :gutter="8">
+    <h1 style="text-align: center;">Welcome to Dapp Store for CMT management!</h1>
+    <!-- <Row :gutter="8">
       <Col :md='{span:8}'>
       <Row>
         <Col span="12" v-for="(item,index) in cardMessage" :key="index" class="cardMessage"  style="padding: 0">
@@ -73,7 +74,7 @@
         </Steps>
       </Card>
       </Col>
-    </Row>
+    </Row> -->
   </div>
 </template>
 <script>
