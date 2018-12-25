@@ -50,7 +50,7 @@
         <!-- 用户信息 -->
         <Dropdown class="userBox" slot='right'>
           <a href="javascript:void(0)">
-            Artiely
+            Admin
             <Icon type="arrow-down-b"></Icon>
           </a>
           <Dropdown-menu slot="list">
