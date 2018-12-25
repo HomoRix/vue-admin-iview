@@ -49,21 +49,21 @@ const menu = [
         level: 1,
         children: [],
         fixed: false
-      },
-      {
-        path: '/subscriberList',
-        name: '邮件订阅', // 'subscriberList',
-        level: 1,
-        children: [],
-        fixed: false
-      },
-      {
-        path: '/suggestionSubmitList',
-        name: 'DAPP修改申请', // 'suggestionSubmitList',
-        level: 1,
-        children: [],
-        fixed: false
       }
+      // {
+      //   path: '/subscriberList',
+      //   name: '邮件订阅', // 'subscriberList',
+      //   level: 1,
+      //   children: [],
+      //   fixed: false
+      // },
+      // {
+      //   path: '/suggestionSubmitList',
+      //   name: 'DAPP修改申请', // 'suggestionSubmitList',
+      //   level: 1,
+      //   children: [],
+      //   fixed: false
+      // }
       // {
       //   path: '/chart',
       //   name: 'chart',
