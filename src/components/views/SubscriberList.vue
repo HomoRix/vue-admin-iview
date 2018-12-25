@@ -353,39 +353,12 @@ export default {
      * @edit
      */
     show (index) {
-      var checkedActions = this.listData[index].checkedActions
-      var targetStr = ''
-      if (checkedActions) {
-        for (var i in checkedActions) {
-          if (checkedActions[i] === 'Status') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Update the status<br/>'
-          } else if (checkedActions[i] === 'Other') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Update the description/author/other text<br/>'
-          } else if (checkedActions[i] === 'Links') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Report broken/missing link(s)<br/>'
-          } else if (checkedActions[i] === 'Tags') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Report incorrect tags<br/>'
-          } else if (checkedActions[i] === 'Contracts') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Add / update contract addresses<br/>'
-          } else if (checkedActions[i] === 'Image') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Add logo / icon / image URLs<br/>'
-          } else if (checkedActions[i] === 'Flag') {
-            targetStr += ((parseInt(i) + 1) + '.') + 'Flag this DApp as inappropriate<br/>'
-          }
-        }
-      }
       this.currIndex = index
       this.currDate = this.listData[index]
       this.detailModal = true
       this.$Modal.info({
         title: '详情',
-        content: `DAPP名称：${this.listData[index].dapp}<br>更新申请者名称：${
-          this.listData[index].name
-        }<br>更新申请者邮箱：${this.listData[index].email}<br>更新建议：${
-          this.listData[index].suggestions
-        }<br>更新类目：${
-          targetStr
-        }`
+        content: `订阅者邮箱：${this.listData[index].email}<br>`
       })
     },
     remove (tagId, index) {
