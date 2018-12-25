@@ -256,6 +256,38 @@ const updateSubscriber = (subscriber) => {
   })
 }
 
+const getAdminListData = (params) => {
+  return fetch({
+    url: 'admin/list.json',
+    params: params,
+    method: 'get'
+  })
+}
+
+const addAdmin = (admin) => {
+  return fetch({
+    url: 'admin/add.json',
+    data: admin,
+    method: 'post'
+  })
+}
+
+const deleteAdmin = (params) => {
+  return fetch({
+    url: 'admin/delete.json',
+    params: params,
+    method: 'get'
+  })
+}
+
+const updateAdmin = (admin) => {
+  return fetch({
+    url: 'admin/update.json',
+    data: admin,
+    method: 'post'
+  })
+}
+
 const getSuggestionSubmitListData = (params) => {
   return fetch({
     url: 'suggestionSubmit/list.json',
@@ -321,7 +353,11 @@ const apiList = {
   getSuggestionSubmitListData,
   addSuggestionSubmit,
   updateSuggestionSubmit,
-  deleteSuggestionSubmit
+  deleteSuggestionSubmit,
+  getAdminListData,
+  addAdmin,
+  updateAdmin,
+  deleteAdmin
 }
 
 export default apiList

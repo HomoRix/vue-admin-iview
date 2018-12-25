@@ -14,6 +14,7 @@ const List = () => import('@/components/views/List')
 const Filter = () => import('@/components/pages/Filter')
 const Lock = () => import('@/components/layout/base/Lock')
 
+const AdminList = () => import('@/components/views/AdminList')
 const DappInfoList = () => import('@/components/views/DappInfoList')
 const CategoryList = () => import('@/components/views/CategoryList')
 const TagList = () => import('@/components/views/TagList')
@@ -30,6 +31,14 @@ const routes = [
     // redirect: '/index',
     redirect: '/dappInfoList',
     children: [
+      {
+        path: '/adminList',
+        name: '管理者列表', // 'adminList',
+        component: AdminList,
+        meta: {
+          requiresAuth: true // 是否需要登录
+        }
+      },
       {
         path: '/dappInfoList',
         name: 'DAPP列表', // 'dappInfoList',
