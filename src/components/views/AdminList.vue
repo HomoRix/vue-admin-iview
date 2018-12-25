@@ -116,6 +116,7 @@
           </Form-item>
           <Form-item label='再次输入密码*'>
             <Input v-model='rePassword' placeholder='请输入'/>
+            <label v-if="passwordNotEqual"><font color="red">两次输入的密码不一致</font></label>
           </Form-item>
           <Form-item label='创建日期' v-if="currIndex!=-1">
             <!-- <Date-picker
@@ -136,7 +137,7 @@
           long
           @click.native='saveBatch(currDate)'
           :loading='loading'
-          :disabled='saveDisabled'
+          :disabled='saveDisabled || passwordNotEqual'
         >保存</Button>
       </div>
     </Modal>
@@ -158,11 +159,13 @@ export default {
       errorCheckFields: [
         'email',
         'name',
-        'username'
+        'username',
+        'password'
       ],
       formItem: {
         searchText: ''
       },
+      rePassword: '',
       searchState: false,
       editModal: false,
       detailModal: false,
@@ -300,8 +303,24 @@ export default {
         }
       }
     },
+    rePassword: {
+      handler (val) {
+        if (val !== this.currDate.password) {
+          this.passwordNotEqual = true
+        } else {
+          this.passwordNotEqual = false
+        }
+      }
+    },
     currDate: {
       handler (val) {
+        if (val && (val.password && val.password.length > 0)) {
+          if (val.password !== this.rePassword) {
+            this.passwordNotEqual = true
+          } else {
+            this.passwordNotEqual = false
+          }
+        }
         // console.log('val:' + JSON.stringify(val))
         // console.log('val:' + JSON.stringify(Object.keys(val)))
         let keys = Object.keys(val)
@@ -409,12 +428,18 @@ export default {
         // 新增
         this.currDate = {
           createDate: '',
-          email: ''
+          email: '',
+          name: '',
+          username: '',
+          password: ''
         }
       } else {
         // 编辑
         this.currDate = this.listData[index]
       }
+      // 清空password和rePassword
+      this.currDate.password = ''
+      this.rePassword = ''
     },
     /**
      * 批量删除

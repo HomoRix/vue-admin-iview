@@ -15,13 +15,13 @@ const menu = [
     level: 0,
     fixed: false,
     children: [
-      // {
-      //   path: '/adminList',
-      //   name: '管理者列表', // 'adminList',
-      //   level: 1,
-      //   children: [],
-      //   fixed: false
-      // },
+      {
+        path: '/adminList',
+        name: '管理者列表', // 'adminList',
+        level: 1,
+        children: [],
+        fixed: false
+      },
       {
         path: '/dappInfoList',
         name: 'DAPP列表', // 'dappInfoList',
